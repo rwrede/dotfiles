@@ -1,5 +1,10 @@
-source /usr/local/git/contrib/completion/git-completion.bash
-export PS1='\u@\h:\w $(__git_ps1 "(%s)") > '
+# Git command line completion
+source /usr/local/Cellar/git/1.7.12/etc/bash_completion.d/git-completion.bash
+
+# Git-aware prompt
+export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[31m\]$(git branch 2>/dev/null|cut -f2 -d\* -s) \[\033[01;34m\]$\[\033[00m\] '
+
+# Aliases
 alias ll='ls -laG'
 alias ss='script/server'
 alias sc='script/console'
@@ -33,7 +38,6 @@ function gpa
 }
 
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
-
 
 ##
 # Your previous /Users/rwrede/.bash_profile file was backed up as /Users/rwrede/.bash_profile.macports-saved_2009-10-26_at_18:56:35
@@ -70,4 +74,5 @@ export PGDATA='/Users/rwrede/postgres/data'
 function leo() {
  w3m -dump "http://pda.leo.org/?search=\"$*\"" | sed -n -e :a -e '1,9!{P;N;D;};N;ba' | sed -e '1,14d'
 }
-export VIMRUNTIME=/usr/share/vim/vim72
+export VIMRUNTIME=/usr/share/vim/vim73
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
