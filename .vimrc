@@ -34,10 +34,10 @@ set ignorecase   " Ignore case when searching
 set smartcase    " Ignore case when searching lowercase
 
 set lbr          " long lines are wrapped on word boundaries
-
-" modelines for tweaking behaviour on file-level
-set modeline
-set modelines=5  " this is the default, but i really want it that way
+set wrap
+set textwidth=90
+set formatoptions=qrn1
+set colorcolumn=90 " show a red line in column 90
 
 " Time to wait after ESC (default causes an annoying delay)
 set timeout timeoutlen=1000 ttimeoutlen=100
@@ -49,6 +49,7 @@ set shiftwidth=2
 set expandtab
 
 set encoding=utf-8   " Unicode is a beast, but...
+set undofile
 
 " what to show
 set list                  " show line-endings, tabs and trailing spaces
@@ -75,7 +76,6 @@ set t_vb=" "
 " Setting for Latexsuite
 " use ack if available (credit: hukl)
 if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor
 else
   set grepprg=grep\ -nH\ $*
 endif
@@ -128,11 +128,6 @@ if has('windows')
   set showtabline=1
 endif
 
-" show git-branch in statusline if possible
-" if exists('*fugitive#statusline()')
-" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-" endif
-
 " Functions
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
@@ -160,15 +155,10 @@ endfunction
 " autocommands
 if has('autocmd')
   autocmd BufWritePre *.feature,*.erb,*.rb,*.js,*.pde,*.yml,*.sh,*.haml,*.coffee :call <SID>StripTrailingWhitespaces()
-  autocmd BufRead *.feature :setlocal fdm=indent fdl=1
   autocmd BufRead *.scss :setlocal fdm=indent
   autocmd BufRead *.md :setlocal noet
   autocmd BufRead .vimperatorrc :setlocal ft=vimperator
   autocmd BufRead *.yml :setlocal fdm=indent fdl=2 ai
-  autocmd BufNewFile,BufRead *.feature inoremap <silent> <Bar>   <Bar><ESC>:call <SID>align()<CR>a
-  " autocmd WinEnter * wincmd _
-  " don't clutter the bufferspace with fugitive-buffers
-  " autocmd BufReadPost fugitive://* set bufhidden=delete
 endif
 
 " Key-mappings
@@ -201,3 +191,68 @@ endif
 
 "show git branch in a statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" write all files when loosing focus
+" au FocusLost * :wa
+"
+" Hides buffers instead of closing them. Means you can have unwritten files
+" and open a new file without being forced to write or undo your changes.
+" Could be very helpful but does not work fine with the on FocusLost :wa
+" setting above as you will get errors for [new] unsaved files. So experiment
+" with the one setting or the other. Error: No file name for buffer X
+set hidden
+
+" relativenumber changes Vim’s line number column to display how far away each line is from
+" the current one, instead of showing the absolute line number. Means easier
+" user for motion commands like d<NUMBER>d
+set relativenumber
+" switch between absolute and relative number mode with crtl+n
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunction
+nnoremap <C-n> :call NumberToggle()<cr>
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+" Quickly edit/reload the vimrc file by pressing the leader key (here ,) and
+" ev/sv
+nmap <silent> <leader>ev :e $MYVIMRC<cr>
+nmap <silent> <leader>sv :so $MYVIMRC<cr>
+
+" Never let vim write a backup file. We have version control right?
+set nobackup
+set noswapfile
+
+" map . to :
+" I don't have to press space anymore. yay :)
+nnoremap . :
+
+" deactivate the arrow keys and force yourself to use hjkl
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+
+nnoremap <leader>a :Ack
+inoremap öö <ESC>
+
+" type ,w to vertical split the current file and move to new window
+nnoremap <leader>w <C-w>v<C-w>l
+
+" Press only ctrl+{h,j,k,l} to navigate through windows.
+" Especially when mapping the caps lock key to ctrl this is very helpful.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
