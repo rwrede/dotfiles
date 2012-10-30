@@ -7,6 +7,7 @@ set nocompatible  " Surprise, I actually want Vim :-)
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-rails.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
