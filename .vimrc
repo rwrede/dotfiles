@@ -155,7 +155,7 @@ endfunction
 
 " autocommands
 if has('autocmd')
-  autocmd BufWritePre *.feature,*.erb,*.rb,*.js,*.pde,*.yml,*.sh,*.haml,*.coffee :call <SID>StripTrailingWhitespaces()
+  autocmd BufWritePre *.feature,*.erb,*.rb,*.js,*.pde,*.yml,*.sh,*.haml,*.coffee,*.markdown :call <SID>StripTrailingWhitespaces()
   autocmd BufRead *.scss :setlocal fdm=indent
   autocmd BufRead *.md :setlocal noet
   autocmd BufRead .vimperatorrc :setlocal ft=vimperator
