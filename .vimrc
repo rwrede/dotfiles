@@ -229,10 +229,6 @@ nmap <silent> <leader>sv :so $MYVIMRC<cr>
 set nobackup
 set noswapfile
 
-" map . to :
-" I don't have to press space anymore. yay :)
-nnoremap . :
-
 " deactivate the arrow keys and force yourself to use hjkl
 nnoremap <up> <nop>
 nnoremap <down> <nop>
