@@ -1,6 +1,5 @@
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
+syntax on
+filetype off           " Enable filetype detection
 
 set nocompatible  " Surprise, I actually want Vim :-)
 
@@ -20,7 +19,18 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-cucumber'
+Bundle 'scrooloose/syntastic'
 
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
+filetype plugin indent on
+
+
+
+" :help W11 reading in files automatically if only changed on disk
+set autoread
 set backspace=indent,eol,start
 set scrolloff=5  " have always 5 lines of context around the cursor
 
@@ -36,9 +46,9 @@ set smartcase    " Ignore case when searching lowercase
 
 set lbr          " long lines are wrapped on word boundaries
 set wrap
-set textwidth=90
+set textwidth=80
 set formatoptions=qrn1
-set colorcolumn=90 " show a red line in column 90
+set colorcolumn=80 " show a red line in column 80
 
 " Time to wait after ESC (default causes an annoying delay)
 set timeout timeoutlen=1000 ttimeoutlen=100
@@ -90,10 +100,6 @@ let NERDTreeHijackNetrw=1
 " and this doesn't hurt on other OS either
 let mapleader = ","
 let maplocalleader = ","
-
-" I want to *use* Vim, actually...
-syntax on
-filetype plugin indent on
 
 " Vim should look good.
 " so, at least use some dark theme
@@ -201,7 +207,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Could be very helpful but does not work fine with the on FocusLost :wa
 " setting above as you will get errors for [new] unsaved files. So experiment
 " with the one setting or the other. Error: No file name for buffer X
-set hidden
+" set hidden
 
 " relativenumber changes Vim’s line number column to display how far away each line is from
 " the current one, instead of showing the absolute line number. Means easier
@@ -253,3 +259,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" When set to 1 the error window will be automatically opened when errors are
+" detected, and closed when none are detected.
+let g:syntastic_auto_loc_list=1
