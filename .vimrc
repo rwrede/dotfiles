@@ -11,7 +11,7 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
@@ -92,9 +92,9 @@ else
 endif
 
 " Settings for NERDTree
-let NERDChristmasTree=1   " Colorful output!!1!
+" let NERDChristmasTree=1   " Colorful output!!1!
 " let NERDTreeChDirMode=2   " Always cd to the rootdir of the NERDTree
-let NERDTreeHijackNetrw=1
+" let NERDTreeHijackNetrw=1
 
 " The OSX-keyboardlayout sucks, especially when you have \ as Leader...
 " and this doesn't hurt on other OS either
@@ -183,7 +183,7 @@ endif
 " map <F5> <ESC>:w:Rake
 
 " NERDtree
-map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+" map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 nmap <Tab> <C-W>w
 nmap <S-Tab> <C-W>W
