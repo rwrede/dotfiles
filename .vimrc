@@ -5,13 +5,16 @@ set nocompatible  " Surprise, I actually want Vim :-)
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
 
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rails'
 Bundle 'kien/ctrlp.vim'
 Bundle 'godlygeek/tabular'
 Bundle 'mileszs/ack.vim'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
@@ -20,14 +23,13 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-cucumber'
-Bundle 'scrooloose/syntastic'
+" Bundle 'scrooloose/syntastic'
+Bundle 'jgdavey/vim-blockle'
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
 filetype plugin indent on
-
-
 
 " :help W11 reading in files automatically if only changed on disk
 set autoread
@@ -92,9 +94,9 @@ else
 endif
 
 " Settings for NERDTree
-" let NERDChristmasTree=1   " Colorful output!!1!
-" let NERDTreeChDirMode=2   " Always cd to the rootdir of the NERDTree
-" let NERDTreeHijackNetrw=1
+let NERDChristmasTree=1   " Colorful output!!1!
+let NERDTreeChDirMode=2   " Always cd to the rootdir of the NERDTree
+let NERDTreeHijackNetrw=1
 
 " The OSX-keyboardlayout sucks, especially when you have \ as Leader...
 " and this doesn't hurt on other OS either
@@ -161,7 +163,7 @@ endfunction
 
 " autocommands
 if has('autocmd')
-  autocmd BufWritePre *.feature,*.erb,*.rb,*.js,*.pde,*.yml,*.sh,*.haml,*.coffee,*.markdown :call <SID>StripTrailingWhitespaces()
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
   autocmd BufRead *.scss :setlocal fdm=indent
   autocmd BufRead *.md :setlocal noet
   autocmd BufRead .vimperatorrc :setlocal ft=vimperator
@@ -183,7 +185,10 @@ endif
 " map <F5> <ESC>:w:Rake
 
 " NERDtree
-" map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+
+" show file explorer
+" map <Leader>d :Explore<CR>
 
 nmap <Tab> <C-W>w
 nmap <S-Tab> <C-W>W
@@ -207,7 +212,7 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Could be very helpful but does not work fine with the on FocusLost :wa
 " setting above as you will get errors for [new] unsaved files. So experiment
 " with the one setting or the other. Error: No file name for buffer X
-" set hidden
+set hidden
 
 " relativenumber changes Vim’s line number column to display how far away each line is from
 " the current one, instead of showing the absolute line number. Means easier
@@ -236,16 +241,16 @@ set nobackup
 set noswapfile
 
 " deactivate the arrow keys and force yourself to use hjkl
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
+" nnoremap j gj
+" nnoremap k gk
 
 nnoremap <leader>a :Ack
 inoremap öö <ESC>
@@ -263,3 +268,11 @@ nnoremap <C-l> <C-w>l
 " When set to 1 the error window will be automatically opened when errors are
 " detected, and closed when none are detected.
 let g:syntastic_auto_loc_list=1
+
+" Hide files matching patterns in netrw file explorer:
+let g:netrw_list_hide=".*\.un~"
+
+" Mark all scenarios as wip by typing :WIP
+command! -range -nargs=0 WIP %s/^\( *\)Scenario/\1@wip\r\1Scenario/g
+
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
