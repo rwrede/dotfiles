@@ -316,3 +316,32 @@ command! -range -nargs=0 WIP %s/^\( *\)Scenario/\1@wip\r\1Scenario/g
 command! -range -nargs=0 HASH %s/:\([^ ]*\)\(\s*\)=>/\1:/g
 
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+
+" I want a black sign column for airblade/vim-gitgutter because it looks so
+" nice!
+highlight clear SignColumn
+" I do not want gitgutter to update signs when I stop typing (improve perf)
+let g:gitgutter_realtime = 0
+" I do not want gitgutter to update signs when I switch buffers, tabs or focus
+" the GUI (improve perf)
+let g:gitgutter_eager = 1
+
+let g:gist_post_private = 1
+
+" remap split join commands to make them easier to type (AndrewRadev/splitjoin.vim)
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
+
+" project wide search and replace
+" :args `ag -l update_single_attribute_skipping_everything .`
+" :argdo %s/update_single_attribute_skipping_everything/update_column/gec | w
+
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
+    return "\<C-N>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+:inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+:set dictionary="/usr/dict/words"
