@@ -254,19 +254,19 @@ set hidden
 " relativenumber changes Vim’s line number column to display how far away each line is from
 " the current one, instead of showing the absolute line number. Means easier
 " user for motion commands like d<NUMBER>d
-set relativenumber
-" switch between absolute and relative number mode with crtl+n
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set number
-  else
-    set relativenumber
-  endif
-endfunction
-nnoremap <C-n> :call NumberToggle()<cr>
+" set relativenumber
+" " switch between absolute and relative number mode with crtl+n
+" function! NumberToggle()
+"   if(&relativenumber == 1)
+"     set number
+"   else
+"     set relativenumber
+"   endif
+" endfunction
+" nnoremap <C-n> :call NumberToggle()<cr>
 
-autocmd InsertEnter * :set number
-autocmd InsertLeave * :set relativenumber
+" autocmd InsertEnter * :set number
+" autocmd InsertLeave * :set relativenumber
 
 " Quickly edit/reload the vimrc file by pressing the leader key (here ,) and
 " ev/sv
