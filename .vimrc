@@ -193,6 +193,18 @@ if has('autocmd')
   autocmd BufRead *.md :setlocal noet
   autocmd BufRead .vimperatorrc :setlocal ft=vimperator
   autocmd BufRead *.yml :setlocal fdm=indent fdl=2 ai
+  " for vim-dispatch to work better
+  autocmd FileType cucumber compiler cucumber | setl makeprg=zeus\ cucumber
+  autocmd FileType ruby
+        \ if expand('%') =~# '_test\.rb$' |
+        \   compiler rubyunit | setl makeprg=testrb |
+        \ elseif expand('%') =~# '_spec\.rb$' |
+        \   compiler rspec | setl makeprg=zeus\ rspec |
+        \ else |
+        \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
+        \ endif
+  " Source the vimrc file after saving it
+  autocmd BufWritePost .vimrc source $MYVIMRC
 endif
 
 " Key-mappings
