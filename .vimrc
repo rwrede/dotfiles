@@ -57,6 +57,7 @@ set scrolloff=5  " have always 5 lines of context around the cursor
 
 set history=50   " keep 50 lines of command line history
 set ruler        " show the cursor position all the time
+set cursorline
 set laststatus=2 " always show status bar
 set showcmd      " display incomplete commands
 
