@@ -312,4 +312,7 @@ let g:netrw_list_hide=".*\.un~"
 " Mark all scenarios as wip by typing :WIP
 command! -range -nargs=0 WIP %s/^\( *\)Scenario/\1@wip\r\1Scenario/g
 
+" Convert to new ruby 1.9 hash syntax
+command! -range -nargs=0 HASH %s/:\([^ ]*\)\(\s*\)=>/\1:/g
+
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
