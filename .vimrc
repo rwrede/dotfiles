@@ -239,7 +239,7 @@ if filereadable($VIMRUNTIME . "/macros/matchit.vim")
 endif
 
 "show git branch in a statusline
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " write all files when loosing focus
 " au FocusLost * :wa
