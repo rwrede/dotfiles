@@ -113,6 +113,10 @@ else
   set grepprg=grep\ -nH\ $*
 endif
 
+" Comment in if the binary is called ack-grep instead of ack on your maching
+" This is the case on staging server of course.
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
 " Settings for NERDTree
 let NERDChristmasTree=1   " Colorful output!!1!
 let NERDTreeChDirMode=2   " Always cd to the rootdir of the NERDTree
