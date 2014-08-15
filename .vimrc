@@ -22,9 +22,28 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-cucumber'
+" Bundle 'tpope/vim-cucumber' # comment again in when PR accepted
+Bundle 'rwrede/vim-cucumber'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-dispatch'
+" deactivated because of performance problems when saving files
 " Bundle 'scrooloose/syntastic'
 Bundle 'jgdavey/vim-blockle'
+" Bundle 'ervandew/supertab'
+" Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'bling/vim-airline'
+" Bundle 'mattn/gist-vim'
+" Bundle 'skalnik/vim-vroom'
+Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'kana/vim-textobj-user'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'mustache/vim-mustache-handlebars'
+
+let g:EasyMotion_leader_key = '<space>'
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
