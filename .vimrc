@@ -301,6 +301,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <D-t> :tabnew<cr>
+nnoremap <D-w> :close<cr>
 
 " When set to 1 the error window will be automatically opened when errors are
 " detected, and closed when none are detected.
