@@ -57,8 +57,6 @@ export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
 export PATH=/usr/local/Cellar/freetds/0.82/bin:/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
 export GEMEDITOR='mate -w'
@@ -86,3 +84,13 @@ function leo() {
 }
 export VIMRUNTIME=/usr/share/vim/vim73
 export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+export GREP_COLOR='00;38;5;226'
+export GREP_OPTIONS='--color=auto'
+export NO_SCREENCASTS=yes
+export CAPYBARA_CHROME=yes
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
