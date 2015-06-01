@@ -23,6 +23,16 @@ alias gst='git status'
 alias ci='git commit -m'
 alias tmuxi='tmuxinator'
 alias migrate='bundle exec rake db:migrate RAILS_ENV=test && bundle exec rake db:migrate'
+alias zc="zeus cucumber -r features/"
+alias zt="zeus test"
+alias killzeus="reset; ps ax | egrep 'zeus\sslave' | cut -b 1-5 | while read pid; do kill \$pid; done && rm .zeus.sock"
+alias hk="cd /Users/rwrede/projects/b2c"
+alias clock="cd /Users/rwrede/projects/cileos/shiftplan"
+alias landing="cd /Users/rwrede/projects/cileos/shiftplan-web"
+alias founder_institute="cd /Users/rwrede/projects/cileos/founder_institute"
+alias home="cd /Users/rwrede"
+alias 'gitcolast'='git co @{-1}'
+alias cou='cd /Users/rwrede/projects/github/coucou'
 
 function gnd
 {
