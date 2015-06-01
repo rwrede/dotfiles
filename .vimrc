@@ -42,6 +42,8 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'kana/vim-textobj-user'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'heartsentwined/vim-emblem'
 
 let g:EasyMotion_leader_key = '<space>'
 
@@ -347,3 +349,11 @@ function! Tab_Or_Complete()
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
+
+autocmd FileType ruby nmap <buffer> <D-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby xmap <buffer> <D-m> <Plug>(xmpfilter-mark)
+autocmd FileType ruby imap <buffer> <D-m> <Plug>(xmpfilter-mark)
+
+autocmd FileType ruby nmap <buffer> <D-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby xmap <buffer> <D-r> <Plug>(xmpfilter-run)
+autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
