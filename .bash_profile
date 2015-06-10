@@ -19,8 +19,16 @@ alias be='bundle exec'
 alias pry_rails='be pry -r ./config/environment.rb'
 alias rspec='bundle exec rspec'
 alias guard='CAPYBARA_CHROME=yes be guard start'
-alias gst='git status'
+# Git aliases
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias go='git checkout '
 alias ci='git commit -m'
+alias 'gitcolast'='git co @{-1}'
 alias tmuxi='tmuxinator'
 alias migrate='bundle exec rake db:migrate RAILS_ENV=test && bundle exec rake db:migrate'
 alias zc="zeus cucumber -r features/"
@@ -31,8 +39,8 @@ alias clock="cd /Users/rwrede/projects/cileos/shiftplan"
 alias landing="cd /Users/rwrede/projects/cileos/shiftplan-web"
 alias founder_institute="cd /Users/rwrede/projects/cileos/founder_institute"
 alias home="cd /Users/rwrede"
-alias 'gitcolast'='git co @{-1}'
 alias cou='cd /Users/rwrede/projects/github/coucou'
+alias babbel='cd /Users/rwrede/projects/babbel'
 
 function gnd
 {
