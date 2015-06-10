@@ -1,5 +1,5 @@
 # Git command line completion
-source /usr/local/Cellar/git/1.7.12/etc/bash_completion.d/git-completion.bash
+source ~/.git-completion.bash
 
 # Git-aware prompt
 export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[31m\]$(git branch 2>/dev/null|cut -f2 -d\* -s) \[\033[01;34m\]$\[\033[00m\] '
