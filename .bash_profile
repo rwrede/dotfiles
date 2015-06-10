@@ -56,6 +56,7 @@ function gpa
 }
 
 export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
+export EDITOR='vim'
 
 ##
 # Your previous /Users/rwrede/.bash_profile file was backed up as /Users/rwrede/.bash_profile.macports-saved_2009-10-26_at_18:56:35
@@ -67,8 +68,6 @@ export PATH=/usr/local/Cellar/freetds/0.82/bin:/opt/local/bin:/opt/local/sbin:$P
 
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-export GEMEDITOR='mate -w'
-export EDITOR='mate -w'
 export VIM_APP_DIR='/Applications/MacVim-7_3-53/'
 
 bind '"\e[A":history-search-backward'
