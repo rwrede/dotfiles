@@ -3,47 +3,55 @@ filetype off           " Enable filetype detection
 
 set nocompatible  " Surprise, I actually want Vim :-)
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-rails'
-Bundle 'kien/ctrlp.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'mileszs/ack.vim'
-Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-endwise'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-commentary'
-" Bundle 'tpope/vim-cucumber' # comment again in when PR accepted
-Bundle 'rwrede/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-dispatch'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-rails'
+Plugin 'kien/ctrlp.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-endwise'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-commentary'
+" Plugin 'tpope/vim-cucumber' # comment again in when PR accepted
+Plugin 'rwrede/vim-cucumber'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-dispatch'
 " deactivated because of performance problems when saving files
-" Bundle 'scrooloose/syntastic'
-Bundle 'jgdavey/vim-blockle'
-" Bundle 'ervandew/supertab'
-" Bundle 'vim-scripts/AutoComplPop'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-" Bundle 'mattn/gist-vim'
-" Bundle 'skalnik/vim-vroom'
-Bundle 'AndrewRadev/splitjoin.vim'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'kana/vim-textobj-user'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'heartsentwined/vim-emblem'
+" Plugin 'scrooloose/syntastic'
+Plugin 'jgdavey/vim-blockle'
+" Plugin 'ervandew/supertab'
+" Plugin 'vim-scripts/AutoComplPop'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
+" Plugin 'mattn/gist-vim'
+" Plugin 'skalnik/vim-vroom'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'kana/vim-textobj-user'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 't9md/vim-ruby-xmpfilter'
+Plugin 'heartsentwined/vim-emblem'
+Plugin 'jpo/vim-railscasts-theme'
+call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
 
