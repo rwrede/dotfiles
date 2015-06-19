@@ -80,7 +80,6 @@ set shiftwidth=2
 set expandtab
 
 set encoding=utf-8   " Unicode is a beast, but...
-set undofile
 
 " what to show
 set list                  " show line-endings, tabs and trailing spaces
