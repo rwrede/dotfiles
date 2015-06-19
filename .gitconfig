@@ -8,8 +8,10 @@
   co = checkout
   ci = commit
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
-[core]
-  editor = mvim --remote-tab-wait
 [user]
-  name = Raphaela Wrede
-  email = rw@cileos.com
+	name = Raphaela Wrede
+	email = raphaela.wrede@gmail.com
+[interactive]
+	singlekey = true
+[push]
+	default = simple
