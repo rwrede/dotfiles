@@ -11,3 +11,5 @@
 [user]
 	name = Raphaela Wrede
 	email = raphaela.wrede@gmail.com
+[interactive]
+	singlekey = true
