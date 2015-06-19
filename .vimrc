@@ -132,7 +132,6 @@ colo torte
 " or: use the more colorful colorscheme if possible
 if &t_Co >= 256 || has('gui')
   colo railscasts
-  " colo gbr256
 endif
 
 " Tweak the GUI
