@@ -353,3 +353,5 @@ autocmd FileType ruby imap <buffer> <D-m> <Plug>(xmpfilter-mark)
 autocmd FileType ruby nmap <buffer> <D-r> <Plug>(xmpfilter-run)
 autocmd FileType ruby xmap <buffer> <D-r> <Plug>(xmpfilter-run)
 autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
+
+set clipboard=unnamed
