@@ -272,6 +272,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<cr>
 " Never let vim write a backup file. We have version control right?
 set nobackup
 set noswapfile
+" let vim save undofiles after closing
+set undofile
 
 " deactivate the arrow keys and force yourself to use hjkl
 " nnoremap <up> <nop>
