@@ -15,3 +15,5 @@
 	singlekey = true
 [push]
 	default = simple
+[core]
+	excludesfile = /Users/rwrede/.gitignore
