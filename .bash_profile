@@ -42,6 +42,7 @@ alias home="cd /Users/rwrede"
 alias cou='cd /Users/rwrede/projects/github/coucou'
 alias babbel='cd /Users/rwrede/projects/babbel'
 alias bprofile='source ~/.bash_profile'
+alias dotfiles='cd ~/projects/raphaela/dotfiles'
 
 function gnd
 {
