@@ -43,6 +43,7 @@ alias cou='cd /Users/rwrede/projects/github/coucou'
 alias babbel='cd /Users/rwrede/projects/babbel'
 alias bprofile='source ~/.bash_profile'
 alias dotfiles='cd ~/projects/raphaela/dotfiles'
+alias dockerenvs='eval $(docker-machine env dev)'
 
 function gnd
 {
