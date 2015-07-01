@@ -41,6 +41,7 @@ alias founder_institute="cd /Users/rwrede/projects/cileos/founder_institute"
 alias home="cd /Users/rwrede"
 alias cou='cd /Users/rwrede/projects/github/coucou'
 alias babbel='cd /Users/rwrede/projects/babbel'
+alias bprofile='source ~/.bash_profile'
 
 function gnd
 {
