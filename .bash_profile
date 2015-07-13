@@ -45,6 +45,11 @@ alias babbel='cd /Users/rwrede/projects/babbel'
 alias bprofile='source ~/.bash_profile'
 alias dotfiles='cd ~/projects/raphaela/dotfiles'
 alias dockerenvs='eval $(docker-machine env dev)'
+# Remove stopped docker containers
+alias dockerrmc='docker rm $(docker ps -aq)'
+# Remove dangled docker images (tagged with <none>)
+alias dockerrmi='docker rmi $(docker images -f dangling=true -q)'
+alias dockercleanup='dockerrmc; dockerrmi'
 
 function gnd
 {
