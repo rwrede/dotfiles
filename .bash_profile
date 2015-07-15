@@ -50,6 +50,8 @@ alias dockerrmc='docker rm $(docker ps -aq)'
 # Remove dangled docker images (tagged with <none>)
 alias dockerrmi='docker rmi $(docker images -f dangling=true -q)'
 alias dockercleanup='dockerrmc; dockerrmi'
+# list docker environment variables
+alias de='env | grep DOCKER_'
 
 function gnd
 {
