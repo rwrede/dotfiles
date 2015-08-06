@@ -39,6 +39,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
@@ -289,6 +290,9 @@ set undofile
 
 nnoremap <leader>a :Ack
 inoremap öö <ESC>
+
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>t :TagbarToggle<cr>
 
 " type ,w to vertical split the current file and move to new window
 nnoremap <leader>w <C-w>v<C-w>l
