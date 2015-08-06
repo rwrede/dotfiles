@@ -52,6 +52,8 @@ alias dockerrmi='docker rmi $(docker images -f dangling=true -q)'
 alias dockercleanup='dockerrmc; dockerrmi'
 # list docker environment variables
 alias de='env | grep DOCKER_'
+# regenerate ctags
+alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 
 function gnd
 {
