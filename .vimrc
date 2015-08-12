@@ -40,6 +40,7 @@ Plugin 't9md/vim-ruby-xmpfilter'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'majutsushi/tagbar'
+Plugin 'jiangmiao/auto-pairs'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
