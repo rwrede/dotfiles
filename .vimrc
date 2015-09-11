@@ -41,6 +41,7 @@ Plugin 'heartsentwined/vim-emblem'
 Plugin 'jpo/vim-railscasts-theme'
 Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
