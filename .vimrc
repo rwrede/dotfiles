@@ -294,7 +294,14 @@ nnoremap <leader>a :Ack
 inoremap öö <ESC>
 
 nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>m :CtrlP<cr>
 nnoremap <leader>t :TagbarToggle<cr>
+" Go to tag definition under cursor
+nnoremap <leader>g <C-]><cr>
+" Go to next found tag definition in the list
+nnoremap <leader>n :tn<cr>
+" Go back in jump list with CTRL-O
+" Go forward in jump list again with CTRL-TAB
 
 " type ,w to vertical split the current file and move to new window
 nnoremap <leader>w <C-w>v<C-w>l
