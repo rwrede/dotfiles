@@ -304,7 +304,7 @@ nnoremap <leader>n :tn<cr>
 " Go forward in jump list again with CTRL-TAB
 
 " type ,w to vertical split the current file and move to new window
-nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>v <C-w>v<C-w>l
 
 " Press only ctrl+{h,j,k,l} to navigate through windows.
 " Especially when mapping the caps lock key to ctrl this is very helpful.
