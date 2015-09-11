@@ -42,6 +42,7 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'jistr/vim-nerdtree-tabs'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
@@ -220,9 +221,6 @@ endif
 " rails.vim
 " map <F5> <ESC>:w:Rake
 
-" NERDtree
-map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-
 " show file explorer
 " map <Leader>d :Explore<CR>
 
@@ -290,6 +288,9 @@ set undofile
 " nnoremap j gj
 " nnoremap k gk
 
+
+"###### Leader key definitions ######
+
 nnoremap <leader>a :Ack
 inoremap öö <ESC>
 
@@ -305,6 +306,10 @@ nnoremap <leader>n :tn<cr>
 
 " type ,w to vertical split the current file and move to new window
 nnoremap <leader>v <C-w>v<C-w>l
+" NERDtree
+map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+nnoremap <leader>D :NERDTreeTabsToggle<cr>
+
 
 " Press only ctrl+{h,j,k,l} to navigate through windows.
 " Especially when mapping the caps lock key to ctrl this is very helpful.
