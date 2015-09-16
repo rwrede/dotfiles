@@ -376,6 +376,11 @@ autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
 
 set clipboard=unnamed
 
+" Tabs
 :hi TabLineFill ctermfg=Black ctermbg=Black
 :hi TabLine ctermfg=White ctermbg=Black
 :hi TabLineSel ctermfg=DarkBlue ctermbg=White
+" nnoremap gl  :tabnext<CR>
+" nnoremap gh  :tabprev<CR>
+nnoremap g<Right>  :tabnext<CR>
+nnoremap g<Left>  :tabprev<CR>
