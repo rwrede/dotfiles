@@ -122,6 +122,7 @@ endif
 let NERDChristmasTree=1   " Colorful output!!1!
 let NERDTreeChDirMode=2   " Always cd to the rootdir of the NERDTree
 let NERDTreeHijackNetrw=1
+let NERDTreeShowHidden=1
 
 " The OSX-keyboardlayout sucks, especially when you have \ as Leader...
 " and this doesn't hurt on other OS either
