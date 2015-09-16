@@ -380,7 +380,7 @@ set clipboard=unnamed
 :hi TabLineFill ctermfg=Black ctermbg=Black
 :hi TabLine ctermfg=White ctermbg=Black
 :hi TabLineSel ctermfg=DarkBlue ctermbg=White
-" nnoremap gl  :tabnext<CR>
-" nnoremap gh  :tabprev<CR>
+nnoremap gl  :tabnext<CR>
+nnoremap gh  :tabprev<CR>
 nnoremap g<Right>  :tabnext<CR>
 nnoremap g<Left>  :tabprev<CR>
