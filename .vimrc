@@ -374,3 +374,7 @@ autocmd FileType ruby xmap <buffer> <D-r> <Plug>(xmpfilter-run)
 autocmd FileType ruby imap <buffer> <D-r> <Plug>(xmpfilter-run)
 
 set clipboard=unnamed
+
+:hi TabLineFill ctermfg=Black ctermbg=Black
+:hi TabLine ctermfg=White ctermbg=Black
+:hi TabLineSel ctermfg=DarkBlue ctermbg=White
