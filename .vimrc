@@ -309,6 +309,7 @@ nnoremap <leader>v <C-w>v<C-w>l
 " NERDtree
 map <Leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 nnoremap <leader>D :NERDTreeTabsToggle<cr>
+let g:nerdtree_tabs_open_on_console_startup=1
 
 
 " Press only ctrl+{h,j,k,l} to navigate through windows.
