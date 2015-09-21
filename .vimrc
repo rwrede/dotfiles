@@ -61,6 +61,11 @@ set scrolloff=5  " have always 5 lines of context around the cursor
 set history=50   " keep 50 lines of command line history
 set ruler        " show the cursor position all the time
 set cursorline
+
+" Change cursor shape in insert mode
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 set laststatus=2 " always show status bar
 set showcmd      " display incomplete commands
 
