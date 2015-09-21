@@ -43,6 +43,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'elixir-lang/vim-elixir'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
