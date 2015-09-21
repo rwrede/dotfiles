@@ -76,9 +76,9 @@ set smartcase    " Ignore case when searching lowercase
 
 set lbr          " long lines are wrapped on word boundaries
 set wrap
-set textwidth=80
+set textwidth=110
 set formatoptions=qrn1
-set colorcolumn=80 " show a red line in column 80
+set colorcolumn=110 " show a red line in column 110
 
 " Time to wait after ESC (default causes an annoying delay)
 set timeout timeoutlen=1000 ttimeoutlen=100
