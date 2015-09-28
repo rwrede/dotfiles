@@ -44,6 +44,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'ngmy/vim-rubocop'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
@@ -390,3 +391,6 @@ nnoremap gl  :tabnext<CR>
 nnoremap gh  :tabprev<CR>
 nnoremap g<Right>  :tabnext<CR>
 nnoremap g<Left>  :tabprev<CR>
+
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
