@@ -239,6 +239,10 @@ nmap <S-Tab> <C-W>W
 noremap <s-D-right> :tabnext<cr>
 noremap <s-D-left> :tabprev<cr>
 
+" resize current buffer by +/- 5
+nnoremap <s-C-left> :vertical resize -5<cr>
+nnoremap <s-C-right> :vertical resize +5<cr>
+
 " for jumping between opening/ending keywords, e.g. class => end, if => end
 " with %
 if filereadable($VIMRUNTIME . "/macros/matchit.vim")
