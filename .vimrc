@@ -304,8 +304,6 @@ set undofile
 
 
 "###### Leader key definitions ######
-
-nnoremap <leader>a :Ack
 inoremap öö <ESC>
 
 nnoremap <leader>. :CtrlPTag<cr>
