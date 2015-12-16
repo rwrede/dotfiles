@@ -45,6 +45,8 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'plasticboy/vim-markdown'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
