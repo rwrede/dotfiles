@@ -119,3 +119,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 eval $(docker-machine env dev)
 eval "$(rbenv init -)"
+
+source ~/.aws_access_keys
+export MYVIMRC=~/.vimrc
