@@ -364,8 +364,8 @@ nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
 " project wide search and replace
-" :args `ag -l update_single_attribute_skipping_everything .`
-" :argdo %s/update_single_attribute_skipping_everything/update_column/gec | w
+" :args `ag -l x .`
+" :argdo %s/x/y/gec | w
 
 function! Tab_Or_Complete()
   if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
