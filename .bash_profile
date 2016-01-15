@@ -58,6 +58,9 @@ alias de='env | grep DOCKER_'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 
+export MYVIMRC=~/.vimrc
+alias editmyvimrc='vim $MYVIMRC'
+
 function gnd
 {
     growlnotify -m 'FEDDISCH!' --image '/Users/rwrede/Pictures/maja.png' -t 'Biene Maja sagt:'
@@ -122,4 +125,3 @@ eval $(docker-machine env dev)
 eval "$(rbenv init -)"
 
 source ~/.aws_access_keys
-export MYVIMRC=~/.vimrc

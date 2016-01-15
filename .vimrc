@@ -47,6 +47,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'shime/vim-livedown'
+Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'rwrede/vim-ruby-fold'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
@@ -398,3 +400,5 @@ nnoremap g<Left>  :tabprev<CR>
 
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
+
+set foldcolumn=5
