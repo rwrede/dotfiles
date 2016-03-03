@@ -1,1 +1,5 @@
 *.un~
+MY_TODOs.md
+.DS_Store
+.byebug_history
+.idea
