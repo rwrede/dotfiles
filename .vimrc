@@ -245,6 +245,8 @@ noremap <s-D-left> :tabprev<cr>
 nnoremap <s-C-left> :vertical resize -5<cr>
 nnoremap <s-C-right> :vertical resize +5<cr>
 
+nnoremap <C-n> :tabnew<cr>
+
 " for jumping between opening/ending keywords, e.g. class => end, if => end
 " with %
 if filereadable($VIMRUNTIME . "/macros/matchit.vim")
@@ -332,8 +334,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <D-t> :tabnew<cr>
-nnoremap <D-w> :close<cr>
 
 " When set to 1 the error window will be automatically opened when errors are
 " detected, and closed when none are detected.
