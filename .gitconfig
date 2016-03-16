@@ -2,6 +2,12 @@
   diff = auto
   status = auto
   branch = auto
+  ui = always
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [alias]
   br = branch
   st = status
@@ -9,11 +15,16 @@
   ci = commit
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 [user]
-	name = Raphaela Wrede
-	email = raphaela.wrede@gmail.com
+  name = Raphaela Wrede
+  email = raphaela.wrede@gmail.com
 [interactive]
-	singlekey = true
+  singlekey = true
 [push]
-	default = simple
+  default = simple
 [core]
-	excludesfile = /Users/rwrede/.gitignore
+  excludesfile = /Users/rwrede/.gitignore
+  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
