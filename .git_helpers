@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Git command line completion. (Installed via homebrew)
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+source ~/.git_aware_prompt
