@@ -49,6 +49,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'shime/vim-livedown'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'rwrede/vim-ruby-fold'
+Plugin 'jreybert/vimagit'
 call vundle#end()
 
 let g:EasyMotion_leader_key = '<space>'
