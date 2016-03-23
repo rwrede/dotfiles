@@ -1,8 +1,4 @@
-# Git command line completion
-source ~/.git-completion.bash
-
-# Git-aware prompt
-export PS1='\[\033[01;32m\]\u\[\033[01;34m\] \w\[\033[31m\]$(git branch 2>/dev/null|cut -f2 -d\* -s)$(git rev-parse 2>/dev/null && (git diff --no-ext-diff --quiet --exit-code 2> /dev/null || echo -e \*)) \[\033[01;34m\]$\[\033[00m\] '
+source ~/.git_helpers
 
 # Aliases
 alias ll='ls -laG'
