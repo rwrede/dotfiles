@@ -53,9 +53,16 @@ alias dockercleanup='dockerrmc; dockerrmi'
 alias de='env | grep DOCKER_'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
+alias depot='cd ~/projects/ruby_tuesdays/depot'
+alias review='cd ~/projects/babbel/review.service'
+alias gateway='cd ~/projects/babbel/babbel.apigateway'
+alias xreview='cd ~/projects/rwrede/review.service'
 
 export MYVIMRC=~/.vimrc
 alias editmyvimrc='vim $MYVIMRC'
+
+export DYNAMO_PATH='~/bin/dynamodb_local/'
+alias dynamo_start="cd $DYNAMO_PATH && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar"
 
 function gnd
 {
