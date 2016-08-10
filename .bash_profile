@@ -55,8 +55,13 @@ alias de='env | grep DOCKER_'
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 alias depot='cd ~/projects/ruby_tuesdays/depot'
 alias review='cd ~/projects/babbel/review.service'
+alias french='cd ~/projects/babbel/french.graph'
+alias german='cd ~/projects/babbel/german.graph'
+alias english='cd ~/projects/babbel/english.graph'
 alias gateway='cd ~/projects/babbel/babbel.apigateway'
+alias parser='cd ~/projects/babbel/babbel_markup_parser.gem'
 alias xreview='cd ~/projects/rwrede/review.service'
+alias adb='/Users/rwrede/Library/Android/sdk/platform-tools/adb'
 
 export MYVIMRC=~/.vimrc
 alias editmyvimrc='vim $MYVIMRC'
