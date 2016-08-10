@@ -125,11 +125,9 @@ export GREP_OPTIONS='--color=auto'
 export NO_SCREENCASTS=yes
 export CAPYBARA_CHROME=yes
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 eval $(docker-machine env dev)
+
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 source ~/.aws_access_keys
