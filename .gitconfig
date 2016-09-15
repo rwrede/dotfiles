@@ -15,22 +15,22 @@
   ci = commit
   serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
 [user]
-  name = Raphaela Wrede
-  email = raphaela.wrede@gmail.com
+	name = Raphaela Wrede
+	email = raphaela.wrede@gmail.com
 [interactive]
   singlekey = true
 [push]
   default = simple
 [core]
-  excludesfile = /Users/rwrede/.gitignore
+	excludesfile = /Users/rwrede/.gitignore
   pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [filter "lfs"]
   required = true
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
