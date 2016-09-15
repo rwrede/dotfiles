@@ -49,7 +49,6 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'shime/vim-livedown'
 Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'rwrede/vim-ruby-fold'
 Plugin 'jreybert/vimagit'
 call vundle#end()
 
