@@ -50,7 +50,31 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'shime/vim-livedown'
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'jreybert/vimagit'
+Plugin 'scrooloose/syntastic'
 call vundle#end()
+
+let g:syntastic_javascript_checkers = ['eslint']
+" Override eslint with local version where necessary.
+let local_eslint = finddir('node_modules', '.;') . '/.bin/eslint'
+if matchstr(local_eslint, "^\/\\w") == ''
+  let local_eslint = getcwd() . "/" . local_eslint
+endif
+if executable(local_eslint)
+  let g:syntastic_javascript_eslint_exec = local_eslint
+endif
+
+" default setting for syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+" When set to 1 the error window will be automatically opened when errors are
+" detected, and closed when none are detected.
+let g:syntastic_auto_loc_list=1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+nmap <silent> <leader>c :SyntasticCheck<cr>
 
 let g:EasyMotion_leader_key = '<space>'
 
@@ -335,10 +359,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-" When set to 1 the error window will be automatically opened when errors are
-" detected, and closed when none are detected.
-let g:syntastic_auto_loc_list=1
 
 " Hide files matching patterns in netrw file explorer:
 let g:netrw_list_hide=".*\.un~"
