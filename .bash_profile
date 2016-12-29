@@ -54,7 +54,7 @@ alias de='env | grep DOCKER_'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 alias depot='cd ~/projects/ruby_tuesdays/depot'
-alias review='cd ~/projects/babbel/review.service'
+alias review='cd ~/projects/babbel/review-manager.spa'
 alias french='cd ~/projects/babbel/french.graph'
 alias german='cd ~/projects/babbel/german.graph'
 alias english='cd ~/projects/babbel/english.graph'
