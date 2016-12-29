@@ -261,8 +261,6 @@ endif
 " show file explorer
 " map <Leader>d :Explore<CR>
 
-nmap <Tab> <C-W>w
-nmap <S-Tab> <C-W>W
 noremap <s-D-right> :tabnext<cr>
 noremap <s-D-left> :tabprev<cr>
 
