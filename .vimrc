@@ -421,3 +421,5 @@ let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 
 set foldcolumn=5
+
+nmap <Leader>q :quit<CR>
