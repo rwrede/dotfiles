@@ -37,12 +37,9 @@ alias hk="cd /Users/rwrede/projects/b2c"
 alias clock="cd /Users/rwrede/projects/cileos/shiftplan"
 alias landing="cd /Users/rwrede/projects/cileos/shiftplan-web"
 alias founder_institute="cd /Users/rwrede/projects/cileos/founder_institute"
-alias home="cd /Users/rwrede"
 alias cou='cd /Users/rwrede/projects/github/coucou'
-alias babbel='cd /Users/rwrede/projects/babbel'
 alias exam='cd /Users/rwrede/projects/babbel/exam.service'
 alias bprofile='source ~/.bash_profile'
-alias dotfiles='cd ~/projects/raphaela/dotfiles'
 alias dockerenvs='eval $(docker-machine env dev)'
 # Remove stopped docker containers
 alias dockerrmc='docker rm $(docker ps -aq)'
@@ -51,20 +48,26 @@ alias dockerrmi='docker rmi $(docker images -f dangling=true -q)'
 alias dockercleanup='dockerrmc; dockerrmi'
 # list docker environment variables
 alias de='env | grep DOCKER_'
-# regenerate ctags
-alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 alias depot='cd ~/projects/ruby_tuesdays/depot'
-alias review='cd ~/projects/babbel/review-manager.spa'
 alias french='cd ~/projects/babbel/french.graph'
 alias german='cd ~/projects/babbel/german.graph'
 alias english='cd ~/projects/babbel/english.graph'
-alias gateway='cd ~/projects/babbel/babbel.apigateway'
 alias parser='cd ~/projects/babbel/babbel_markup_parser.gem'
 alias xreview='cd ~/projects/rwrede/review.service'
 alias adb='/Users/rwrede/Library/Android/sdk/platform-tools/adb'
 
-export MYVIMRC=~/.vimrc
+### Migrated to zsh: #########################################
+alias home="cd /Users/rwrede"
+alias babbel='cd /Users/rwrede/projects/babbel'
+alias dotfiles='cd ~/projects/raphaela/dotfiles'
+# regenerate ctags
+alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
+alias review='cd ~/projects/babbel/review-manager.spa'
+alias gateway='cd ~/projects/babbel/babbel.apigateway'
 alias editmyvimrc='vim $MYVIMRC'
+
+export MYVIMRC=~/.vimrc
+##############################################################
 
 export DYNAMO_PATH='~/bin/dynamodb_local/'
 alias dynamo_start="cd $DYNAMO_PATH && java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar"
