@@ -86,8 +86,7 @@ function gpa
     cd /Users/rwrede/projects/adva-cnet && git pull origin develop && cd -
 }
 
-export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
-export EDITOR='vim'
+# export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
 
 ##
 # Your previous /Users/rwrede/.bash_profile file was backed up as /Users/rwrede/.bash_profile.macports-saved_2009-10-26_at_18:56:35
