@@ -128,7 +128,7 @@ export GREP_OPTIONS='--color=auto'
 export NO_SCREENCASTS=yes
 export CAPYBARA_CHROME=yes
 
-eval $(docker-machine env dev)
+# eval $(docker-machine env dev)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
