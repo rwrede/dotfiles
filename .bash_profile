@@ -67,6 +67,7 @@ alias gateway='cd ~/projects/babbel/babbel.apigateway'
 alias editmyvimrc='vim $MYVIMRC'
 
 export MYVIMRC=~/.vimrc
+export EDITOR='vim'
 ##############################################################
 
 export DYNAMO_PATH='~/bin/dynamodb_local/'
