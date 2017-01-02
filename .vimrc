@@ -7,7 +7,7 @@ set nocompatible  " Surprise, I actually want Vim :-)
 set rtp+=~/.vim/bundle/Vundle.vim
 " let Vundle manage Vundle
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-rails'
 Plugin 'kien/ctrlp.vim'
