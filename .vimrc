@@ -30,7 +30,8 @@ Plugin 'jgdavey/vim-blockle'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
@@ -52,6 +53,8 @@ Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'jreybert/vimagit'
 Plugin 'scrooloose/syntastic'
 call vundle#end()
+
+let g:airline_theme='bubblegum'
 
 let g:syntastic_javascript_checkers = ['eslint']
 " Override eslint with local version where necessary.
