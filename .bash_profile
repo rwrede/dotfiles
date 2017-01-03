@@ -8,9 +8,7 @@ alias p='cd /Users/rwrede/projects'
 alias redis_start='/Users/rwrede/projects/metasearch/redis/src/redis-server'
 alias bec='CAPYBARA_CHROME=yes bundle exec cucumber -r features/'
 alias becf='bundle exec cucumber -r features/'
-alias be='bundle exec'
 alias pry_rails='be pry -r ./config/environment.rb'
-alias rspec='bundle exec rspec'
 alias guard='CAPYBARA_CHROME=yes be guard start'
 # Git aliases
 alias gs='git status '
@@ -62,6 +60,8 @@ alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 alias review='cd ~/projects/babbel/review-manager.spa'
 alias gateway='cd ~/projects/babbel/babbel.apigateway'
 alias editmyvimrc='vim $MYVIMRC'
+alias be='bundle exec'
+alias rspec='bundle exec rspec'
 
 export MYVIMRC=~/.vimrc
 export EDITOR='vim'
