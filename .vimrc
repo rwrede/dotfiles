@@ -423,6 +423,6 @@ nnoremap g<Left>  :tabprev<CR>
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
 
-set foldcolumn=5
+set nofoldenable
 
 nmap <Leader>q :quit<CR>
