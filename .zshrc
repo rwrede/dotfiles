@@ -96,3 +96,8 @@ precmd() {
   # Sets the tab title to current dir
   echo -ne "\e]1;${PWD##*/}\a"
 }
+
+# Navigate and delete word-wise in terminal prompt with Alt + -> and Alt + <- respectively.
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
+bindkey "^[[1;10D" backward-delete-word
