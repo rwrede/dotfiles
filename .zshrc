@@ -101,3 +101,5 @@ precmd() {
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
 bindkey "^[[1;10D" backward-delete-word
+
+source ~/.aws_access_keys
