@@ -22,7 +22,7 @@
 [push]
   default = simple
 [core]
-	excludesfile = /Users/rwrede/.gitignore
+	excludesfile = ~/.gitignore
   pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [filter "lfs"]
   required = true

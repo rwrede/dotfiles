@@ -4,8 +4,8 @@ source ~/.git_helpers
 alias ll='ls -laG'
 alias ss='script/server'
 alias sc='script/console'
-alias p='cd /Users/rwrede/projects'
-alias redis_start='/Users/rwrede/projects/metasearch/redis/src/redis-server'
+alias p='cd ~/projects'
+alias redis_start='~/projects/metasearch/redis/src/redis-server'
 alias bec='CAPYBARA_CHROME=yes bundle exec cucumber -r features/'
 alias becf='bundle exec cucumber -r features/'
 alias pry_rails='be pry -r ./config/environment.rb'
@@ -28,12 +28,12 @@ alias migrate='bundle exec rake db:migrate RAILS_ENV=test && bundle exec rake db
 alias zc="zeus cucumber -r features/"
 alias zt="zeus test"
 alias killzeus="reset; ps ax | egrep 'zeus\sslave' | cut -b 1-5 | while read pid; do kill \$pid; done && rm .zeus.sock"
-alias hk="cd /Users/rwrede/projects/b2c"
-alias clock="cd /Users/rwrede/projects/cileos/shiftplan"
-alias landing="cd /Users/rwrede/projects/cileos/shiftplan-web"
-alias founder_institute="cd /Users/rwrede/projects/cileos/founder_institute"
-alias cou='cd /Users/rwrede/projects/github/coucou'
-alias exam='cd /Users/rwrede/projects/babbel/exam.service'
+alias hk="cd ~/projects/b2c"
+alias clock="cd ~/projects/cileos/shiftplan"
+alias landing="cd ~/projects/cileos/shiftplan-web"
+alias founder_institute="cd ~/projects/cileos/founder_institute"
+alias cou='cd ~/projects/github/coucou'
+alias exam='cd ~/projects/babbel/exam.service'
 alias bprofile='source ~/.bash_profile'
 alias dockerenvs='eval $(docker-machine env dev)'
 # Remove stopped docker containers
@@ -49,11 +49,11 @@ alias german='cd ~/projects/babbel/german.graph'
 alias english='cd ~/projects/babbel/english.graph'
 alias parser='cd ~/projects/babbel/babbel_markup_parser.gem'
 alias xreview='cd ~/projects/rwrede/review.service'
-alias adb='/Users/rwrede/Library/Android/sdk/platform-tools/adb'
+alias adb='~/Library/Android/sdk/platform-tools/adb'
 
 ### Migrated to zsh: #########################################
-alias home="cd /Users/rwrede"
-alias babbel='cd /Users/rwrede/projects/babbel'
+alias home="cd ~"
+alias babbel='cd ~/projects/babbel'
 alias dotfiles='cd ~/projects/raphaela/dotfiles'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
@@ -72,21 +72,21 @@ alias dynamo_start="cd $DYNAMO_PATH && java -Djava.library.path=./DynamoDBLocal_
 
 function gnd
 {
-    growlnotify -m 'FEDDISCH!' --image '/Users/rwrede/Pictures/maja.png' -t 'Biene Maja sagt:'
+    growlnotify -m 'FEDDISCH!' --image '~/Pictures/maja.png' -t 'Biene Maja sagt:'
 }
 
 function gpa
 {
-    cd /Users/rwrede/projects/adva-cms2 && git pull origin develop && cd -
-    cd /Users/rwrede/projects/adva-shop && git pull origin develop && cd -
-    cd /Users/rwrede/projects/adva-navision && git pull origin develop && cd -
-    cd /Users/rwrede/projects/adva-cnet && git pull origin develop && cd -
+    cd ~/projects/adva-cms2 && git pull origin develop && cd -
+    cd ~/projects/adva-shop && git pull origin develop && cd -
+    cd ~/projects/adva-navision && git pull origin develop && cd -
+    cd ~/projects/adva-cnet && git pull origin develop && cd -
 }
 
 # export JAVA_HOME='/System/Library/Frameworks/JavaVM.framework/Home/'
 
 ##
-# Your previous /Users/rwrede/.bash_profile file was backed up as /Users/rwrede/.bash_profile.macports-saved_2009-10-26_at_18:56:35
+# Your previous ~/.bash_profile file was backed up as ~/.bash_profile.macports-saved_2009-10-26_at_18:56:35
 ##
 
 # MacPorts Installer addition on 2009-10-26_at_18:56:35: adding an appropriate PATH variable for use with MacPorts.
@@ -111,7 +111,7 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 shopt -s histappend
 
-export PGDATA='/Users/rwrede/postgres/data'
+export PGDATA='~/postgres/data'
 
 function leo() {
  w3m -dump "http://pda.leo.org/?search=\"$*\"" | sed -n -e :a -e '1,9!{P;N;D;};N;ba' | sed -e '1,14d'
@@ -132,6 +132,6 @@ eval "$(rbenv init -)"
 
 source ~/.aws_access_keys
 
-export NVM_DIR="/Users/rwrede/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

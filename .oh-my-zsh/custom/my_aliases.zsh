@@ -2,7 +2,7 @@
 alias editmyzshrc="vim ~/.zshrc"
 alias editmyohmyzsh="vim ~/.oh-my-zsh"
 alias sourcemyzshrc="source  ~/.zshrc"
-alias home="cd /Users/rwrede"
+alias home="cd ~"
 alias dotfiles='cd ~/projects/rwrede/dotfiles'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
