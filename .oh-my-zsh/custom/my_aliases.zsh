@@ -1,6 +1,6 @@
 # My custom aliases:
-alias editmyzshrc="vim ~/.zshrc"
-alias editmyohmyzsh="vim ~/.oh-my-zsh"
+alias editzshrc="vim ~/.zshrc"
+alias editohmyzsh="vim ~/.oh-my-zsh"
 alias sourcemyzshrc="source  ~/.zshrc"
 alias home="cd ~"
 alias dotfiles='cd ~/projects/rwrede/dotfiles'
