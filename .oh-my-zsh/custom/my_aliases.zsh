@@ -4,6 +4,8 @@ alias editohmyzsh="vim ~/.oh-my-zsh"
 alias sourcemyzshrc="source  ~/.zshrc"
 alias home="cd ~"
 alias dotfiles='cd ~/projects/rwrede/dotfiles'
+alias api='cd ~/projects/sonnen/sonnen-api'
+alias sonnen='cd ~/projects/sonnen'
 # regenerate ctags
 alias rctags='ctags -R --tag-relative=yes -f ./.git/tags .'
 alias editmyvimrc='vim $MYVIMRC'
