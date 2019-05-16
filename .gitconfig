@@ -23,7 +23,6 @@
   default = simple
 [core]
 	excludesfile = ~/.gitignore
-  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 [filter "lfs"]
   required = true
   clean = git-lfs clean %f
